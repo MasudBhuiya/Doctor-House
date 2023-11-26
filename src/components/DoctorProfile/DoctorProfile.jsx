@@ -5,8 +5,8 @@ import { SlLocationPin } from 'react-icons/sl';
 const DoctorProfile = () => {
     return (
         <>
-            <div className='img  h-[300px] -mt-28'>
-                <h1 className='pt-40 text-white ps-10'>Home/Doctor Profile</h1>
+            <div className='img  h-[350px] -mt-28'>
+                <h1 className='pt-48 text-white ps-10'>Home/Doctor Profile</h1>
                 <h1 className='text-white text-4xl font-bold ps-10'>Doctor Profile</h1>
             </div>
             <div className='p-2'>

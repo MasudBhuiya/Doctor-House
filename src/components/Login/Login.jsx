@@ -9,7 +9,7 @@ const Login = () => {
                     <img className='w-full md:w-[788px]' src="https://i.ibb.co/WBtN4Pg/Screenshot-2023-11-26-215500.png" alt="" />
                 </div>
                 <div className='rounded-md md:w-[461px] border p-10 shadow-md'>
-                    <h1 className='font-bold text-2xl text-center'>Sign in to Doc House</h1>
+                    <h1 className='font-bold text-3xl text-green-900 text-center'>Sign In to Doc House</h1>
                     <br />
                     <div className="">
                 <div>

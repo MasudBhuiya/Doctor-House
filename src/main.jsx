@@ -12,6 +12,7 @@ import DoctorProfile from './components/DoctorProfile/DoctorProfile';
 import Login from './components/Login/Login';
 import ErrorPage from './components/Error/ErrorPage';
 import Register from './components/Register/Register';
+import Appointment from './components/Appointment/Appointment';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "doctor-profile",
         element:<DoctorProfile></DoctorProfile>
+      },
+      {
+        path: "appointment",
+        element: <Appointment></Appointment>
       }
     ]
   },
