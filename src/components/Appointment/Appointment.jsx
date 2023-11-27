@@ -83,29 +83,16 @@ const Appointment = () => {
                 <p className='text-orange-300 text-center'>Available Services on April 30, 2022</p>
                 <h1 className='text-4xl font-bold text-center'>Please select a service</h1>
 
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-fit mx-auto mt-14 mb-20'>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-fit mx-auto mt-14 mb-20'>
                 <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
-                        <img className='rounded-lg' src="https://i.ibb.co/m0gVp5Y/Screenshot-2023-11-27-005817.png" alt="" />
+                        <img className='rounded-lg' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-bold mb-3">Teeth</h2>
-                            <h2 className="text-3xl font-bold mb-3">Orthodontics</h2>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
-                    <div className="card-body flex items-center justify-center">
-                        <div className='flex gap-8 items-center justify-between'>
-                        <div className='text-5xl mt-2'>
-                        <img className='rounded-lg' src="https://i.ibb.co/FDypCLd/Screenshot-2023-11-27-005932.png" alt="" />
-                        </div>
-                        <div>
-                            <h2 className="text-3xl font-bold mb-3">Cosmetic</h2>
-                            <h2 className="text-3xl font-bold mb-3">Dentisty</h2>
+                            <h2 className="text-2xl font-bold mb-3">Teeth</h2>
+                            <h2 className="text-2xl font-bold mb-3">Orthodontics</h2>
                         </div>
                         </div>
                     </div>
@@ -117,8 +104,21 @@ const Appointment = () => {
                         <img className='rounded-lg' src="https://i.ibb.co/c8FrGzz/Screenshot-2023-11-27-010002.png" alt="" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-bold mb-3">Teeth</h2>
-                            <h2 className="text-3xl font-bold mb-3">Cleaning</h2>
+                            <h2 className="text-2xl font-bold mb-3">Cosmetic</h2>
+                            <h2 className="text-2xl font-bold mb-3">Dentisty</h2>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='flex gap-8 items-center justify-between'>
+                        <div className='text-5xl mt-2'>
+                        <img className='rounded-lg' src="https://i.ibb.co/c8FrGzz/Screenshot-2023-11-27-010002.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Teeth</h2>
+                            <h2 className="text-2xl font-bold mb-3">Cleaning</h2>
                         </div>
                         </div>
                     </div>
@@ -130,8 +130,8 @@ const Appointment = () => {
                         <img className='rounded-lg' src="https://i.ibb.co/j3w6XwJ/Screenshot-2023-11-27-010021.png" alt="" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-bold mb-3">Cavity</h2>
-                            <h2 className="text-3xl font-bold mb-3">Protection</h2>
+                            <h2 className="text-2xl font-bold mb-3">Cavity</h2>
+                            <h2 className="text-2xl font-bold mb-3">Protection</h2>
                         </div>
                         </div>
                     </div>
@@ -143,8 +143,8 @@ const Appointment = () => {
                         <img className='rounded-lg' src="https://i.ibb.co/h9zD8JZ/Screenshot-2023-11-27-010037.png" alt="" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-bold mb-3">Pediatric </h2>
-                            <h2 className="text-3xl font-bold mb-3">Dental</h2>
+                            <h2 className="text-2xl font-bold mb-3">Pediatric </h2>
+                            <h2 className="text-2xl font-bold mb-3">Dental</h2>
                         </div>
                         </div>
                     </div>
@@ -156,14 +156,105 @@ const Appointment = () => {
                         <img className='rounded-lg' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-bold mb-3">Oral</h2>
-                            <h2 className="text-3xl font-bold mb-3">Surgery</h2>
+                            <h2 className="text-2xl font-bold mb-3">Oral</h2>
+                            <h2 className="text-2xl font-bold mb-3">Surgery</h2>
                         </div>
                         </div>
                     </div>
                 </div>
                 </div>
             </div>
+
+
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-fit mx-auto mt-14 mb-20'>
+            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='text-center'>
+                        <div className='flex items-center justify-center'>
+                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Teeth Prthodontics</h2>
+                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                        </div>
+                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='text-center'>
+                        <div className='flex items-center justify-center'>
+                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Cosmetic Dentisty</h2>
+                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                        </div>
+                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='text-center'>
+                        <div className='flex items-center justify-center'>
+                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/c8FrGzz/Screenshot-2023-11-27-010002.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Teeth Cleaning</h2>
+                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                        </div>
+                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='text-center'>
+                        <div className='flex items-center justify-center'>
+                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/j3w6XwJ/Screenshot-2023-11-27-010021.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Cavity Protection</h2>
+                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                        </div>
+                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='text-center'>
+                        <div className='flex items-center justify-center'>
+                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/h9zD8JZ/Screenshot-2023-11-27-010037.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Pediatric Dental</h2>
+                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                        </div>
+                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+                    <div className="card-body flex items-center justify-center">
+                        <div className='text-center'>
+                        <div className='flex items-center justify-center'>
+                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold mb-3">Oral Surgery</h2>
+                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                        </div>
+                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
         </>
     );
 };
