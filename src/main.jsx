@@ -12,7 +12,10 @@ import DoctorProfile from './components/DoctorProfile/DoctorProfile';
 import Login from './components/Login/Login';
 import ErrorPage from './components/Error/ErrorPage';
 import Register from './components/Register/Register';
+import Dashboard from './components/Dashboard/Dashboard';
 import Appointment from './components/Appointment/Appointment';
+import MyAppointments from './components/Dashboard/User/MyAppointments';
+import DoctorAppointment from './components/Dashboard/Doctor/DoctorAppointment';
 
 const router = createBrowserRouter([
   {
@@ -41,6 +44,20 @@ const router = createBrowserRouter([
   {
     path: 'register',
     element: <Register></Register>
+  },
+  {
+    path: "dashboard",
+    element:<Dashboard></Dashboard>,
+    children: [
+      {
+        path: "myappointments",
+        element: <MyAppointments></MyAppointments>
+      },
+      {
+        path: "doctorappointments",
+        element: <DoctorAppointment></DoctorAppointment>
+      }
+    ]
   }
 ]);
 
