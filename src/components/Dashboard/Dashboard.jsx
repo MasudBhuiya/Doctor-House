@@ -21,7 +21,7 @@ const Dashboard = () => {
     //   roles.map(role => setRole(role))
     // },[roles])
 
-    const role = "doctor";
+    const role = "admin";
 
     return (
         <div className='bg-slate-50'>
@@ -41,9 +41,10 @@ const Dashboard = () => {
       {
           role === 'admin' && <>
         {/* Sidebar content here */}
-      <li><NavLink to="/dashboard/reservations"> Manage Users</NavLink></li>
-      <li><NavLink to="/dashboard/history"> Manage Classes</NavLink></li>
-      <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers>All Users</NavLink></li>
+      <li><NavLink to="/dashboard/allusers">All Users</NavLink></li>
+      <li><NavLink to="/dashboard/adddoctor">Add a Doctor</NavLink></li>
+      <li><NavLink to="/dashboard/managedoctor">Manage Doctor</NavLink></li>
+      <li><NavLink to="/">Home</NavLink></li>
         </>
       }
       {
@@ -58,7 +59,7 @@ const Dashboard = () => {
       <li><NavLink to="/dashboard/myappointments">My Appointments</NavLink></li>
       <li><NavLink to="/dashboard/myclasses"> My Reviews</NavLink></li>
       <li><NavLink to="/dashboard/enrolled"> My History</NavLink></li>
-      <li><NavLink to="/dashboard/enrolled"> Home</NavLink></li>
+      <li><NavLink to="/"> Home</NavLink></li>
         </>
       }
 
