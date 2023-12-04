@@ -18,6 +18,7 @@ import MyAppointments from './components/Dashboard/User/MyAppointments';
 import DoctorAppointment from './components/Dashboard/Doctor/DoctorAppointment';
 import Users from './components/Dashboard/Admin/Users';
 import AddDoctor from './components/Dashboard/Admin/AddDoctor';
+import ManageUsers from './components/Dashboard/Admin/ManageUser/ManageUsers';
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "adddoctor",
         element: <AddDoctor></AddDoctor>
+      },
+      {
+        path: "managedoctor",
+        element: <ManageUsers></ManageUsers>
       }
     ]
   }
