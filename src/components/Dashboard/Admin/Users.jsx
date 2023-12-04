@@ -76,19 +76,17 @@ const Users = () => {
                       index % 2 === 0 ? " bg-slate-50 text-xl" : " bg-slate-100 text-xl"
                     }
                   >
-                    <td className="md:flex md:items-center md:gap-2">
-                      <span className="font-bold md:text-sm">{index+1}.</span>
-                    </td>
+                      <td className="font-bold md:text-sm">{index+1}.</td>
                     
                     <td className="md:font-semibold">{user.name}</td>
                     <td className="md:font-semibold">{user.email}</td>
                     <td>
                     {
-                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white w-fit px-5 py-1 rounded">{user.job}</p>
+                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white btn">{user.job}</p>
                     }
                     </td>
                       
-                    <td><h1 className=' bg-emerald-950 text-white w-fit px-5 py-2 rounded mt-1'>Remove User</h1></td>
+                    <td><h1 className=' bg-emerald-950 text-white btn'>Remove User</h1></td>
                   </tr>
                 ))}
               </tbody>
