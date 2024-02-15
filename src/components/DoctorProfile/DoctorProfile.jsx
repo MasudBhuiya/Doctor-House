@@ -44,17 +44,17 @@ const DoctorProfile = () => {
                 </div>
             </div>
 
-            <div className=' shadow-xl max-w-[1440px] mx-auto px-5'>
+            <div className=' shadow-xl mb-10 rounded-2xl max-w-[1440px] mt-20 mx-auto px-5'>
                 <div className='sm:space-x-3 sm:w-[380px] md:w-full border-2 sm:pe-5 my-6 font-bold text-sm rounded-md flex justify-between items-center '>
                     <button className='btn btn-primary'>Overview</button>
                     <p>Locations</p>
                     <p>Reviews</p>
                     <p>Business Hours</p>
                 </div>
-                <h2 className='text-2xl font-bold'>About Me</h2>
+                <h2 className='text-3xl font-bold'>About Me</h2>
                 <p className='my-3'>{doctorData?.about_me} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, labore sapiente corporis tempora, voluptas commodi harum ipsum vero veritatis assumenda, repudiandae beatae error. Deleniti veritatis ipsam culpa magni qui ab ex inventore provident eveniet autem, dolore suscipit laboriosam exercitationem eum!</p>
 
-                <div className='grid md:grid-cols-2'>
+                <div className='grid md:grid-cols-2 mt-10'>
                     <div className='mb-4'>
                         <h1 className='font-bold text-2xl mt-3 mb-4'>Education</h1>
                         <li className='font-bold'>American Dental Medical University</li>

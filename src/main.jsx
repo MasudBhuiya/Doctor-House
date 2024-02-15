@@ -19,6 +19,8 @@ import DoctorAppointment from './components/Dashboard/Doctor/DoctorAppointment';
 import Users from './components/Dashboard/Admin/Users';
 import AddDoctor from './components/Dashboard/Admin/AddDoctor';
 import ManageUsers from './components/Dashboard/Admin/ManageUser/ManageUsers';
+import Recharts from './components/Dashboard/Recharts';
+import PatientsChart from './components/Dashboard/PatientsChart';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,16 @@ const router = createBrowserRouter([
     path: "dashboard",
     element:<Dashboard></Dashboard>,
     children: [
+      {
+        path: '',
+        element: <Recharts></Recharts>,
+        children: [
+          {
+            path: '',
+            element: <PatientsChart></PatientsChart>
+          }
+        ]
+      },
       {
         path: "myappointments",
         element: <MyAppointments></MyAppointments>

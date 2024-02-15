@@ -11,7 +11,7 @@ const Appointment = () => {
                 <h1 className='text-white text-4xl font-bold'>Appointment</h1>
                 </div>
             </div>
-            <div className='md:flex justify-between max-w-[1440px] mx-auto items-center mt-20 md:mt-32  px-5'>
+            <div className='grid md:grid-cols-2 max-w-[1440px] mx-auto items-center mt-20 md:mt-32  px-5'>
                 <div className='card sm:w-80  p-6  mx-auto shadow-lg'>
                     <h1 className='flex justify-between items-center'><span className='font-bold text-lg'>April 2023</span><span className='flex gap-3'><FaLessThan></FaLessThan> <FaGreaterThan></FaGreaterThan></span></h1>
                     <div className='flex justify-between '>
@@ -76,7 +76,7 @@ const Appointment = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='rounded-md md:h-[355px] mx-auto' src="https://i.ibb.co/p22jcHX/Screenshot-2023-11-27-002445.png" alt="" />
+                    <img className='rounded-md w-full mx-auto' src="https://i.ibb.co/p22jcHX/Screenshot-2023-11-27-002445.png" alt="" />
                 </div>
             </div>
 
