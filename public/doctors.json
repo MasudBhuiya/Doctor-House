@@ -1,0 +1,228 @@
+
+[
+  {
+    "id": 1,
+    "name": "Dr. John Smith",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1LyiuYQpNexCIBJ0TehCfkb4ztmLFk0cnUQ&usqp=CAU",
+    "about_me": "Passionate about providing quality dental care with a patient-centric approach.",
+    "education": "Doctor of Dental Medicine (DMD) - University of Dentistry",
+    "work_experience": [
+      {
+        "position": "Senior Dentist",
+        "clinic": "Healthy Smiles Dental Clinic",
+        "years": "10"
+      },
+      {
+        "position": "Associate Dentist",
+        "clinic": "Bright Dental Care",
+        "years": "5"
+      },
+      {
+        "position": "Intern",
+        "clinic": "City Dental Hospital",
+        "years": "2"
+      }
+    ],
+    "services": [
+      "General Dentistry",
+      "Cosmetic Dentistry",
+      "Orthodontics"
+    ],
+    "awards": [
+      "Best Dentist of the Year (2018)",
+      "Excellence in Patient Care Award (2020)"
+    ],
+    "specializations": [
+      "Cosmetic Dentistry",
+      "Orthodontics"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dr. Emily Johnson",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjJp2odFRhH7F1DsH0kWUiZbx4AVWf3_ft1w&usqp=CAU",
+    "about_me": "Dedicated to creating beautiful smiles and promoting oral health.",
+    "education": "Doctor of Dental Surgery (DDS) - Smile University",
+    "work_experience": [
+      {
+        "position": "Principal Dentist",
+        "clinic": "Sparkling Smiles Dental Studio",
+        "years": "8"
+      },
+      {
+        "position": "Dental Surgeon",
+        "clinic": "Sunshine Dental Associates",
+        "years": "6"
+      },
+      {
+        "position": "Resident Dentist",
+        "clinic": "City Dental Hospital",
+        "years": "3"
+      }
+    ],
+    "services": [
+      "Cosmetic Dentistry",
+      "Restorative Dentistry",
+      "Pediatric Dentistry"
+    ],
+    "awards": [
+      "Outstanding Contribution to Dentistry Award (2019)",
+      "Top Dentist in Pediatric Dentistry (2021)"
+    ],
+    "specializations": [
+      "Cosmetic Dentistry",
+      "Pediatric Dentistry"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Dr. Sarah Brown",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFcVFScyeYnhKbyr_YVgm_og6zn1AIUQghfA&usqp=CAU",
+    "about_me": "Committed to delivering comprehensive dental care for the entire family.",
+    "education": "Doctor of Dental Medicine (DMD) - Smile Academy",
+    "work_experience": [
+      {
+        "position": "Family Dentist",
+        "clinic": "Family Dental Wellness",
+        "years": "7"
+      },
+      {
+        "position": "General Dentist",
+        "clinic": "Sunset Dental Center",
+        "years": "4"
+      },
+      {
+        "position": "Intern",
+        "clinic": "City Dental Hospital",
+        "years": "2"
+      }
+    ],
+    "services": [
+      "Family Dentistry",
+      "Preventive Dentistry",
+      "Cosmetic Dentistry"
+    ],
+    "awards": [
+      "Excellence in Family Dentistry Award (2020)",
+      "Community Service in Dentistry (2022)"
+    ],
+    "specializations": [
+      "Family Dentistry",
+      "Preventive Dentistry"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dr. Michael Davis",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbnddws-NLr_3c_5G53fPhLbo-bdWJNarssA&usqp=CAU",
+    "about_me": "Passionate about using the latest technology for precise and comfortable dental treatments.",
+    "education": "Doctor of Dental Surgery (DDS) - Advanced Dental Institute",
+    "work_experience": [
+      {
+        "position": "Lead Dentist",
+        "clinic": "Precision Dental Care",
+        "years": "9"
+      },
+      {
+        "position": "Dental Specialist",
+        "clinic": "Tech-Savvy Dental Solutions",
+        "years": "6"
+      },
+      {
+        "position": "Resident Dentist",
+        "clinic": "City Dental Hospital",
+        "years": "3"
+      }
+    ],
+    "services": [
+      "Advanced Dental Procedures",
+      "Digital Dentistry",
+      "Cosmetic Dentistry"
+    ],
+    "awards": [
+      "Innovation in Dentistry Award (2019)",
+      "Digital Dentistry Excellence (2021)"
+    ],
+    "specializations": [
+      "Advanced Dental Procedures",
+      "Digital Dentistry"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dr. Jessica White",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Axx1OhqZgE2bb_foVK_X52hpDEXl07rRuA&usqp=CAU",
+    "about_me": "Dedicated to creating a comfortable and stress-free environment for patients of all ages.",
+    "education": "Doctor of Dental Medicine (DMD) - Harmony Dental School",
+    "work_experience": [
+      {
+        "position": "Lead Dentist",
+        "clinic": "Calm & Caring Dentistry",
+        "years": "8"
+      },
+      {
+        "position": "Pediatric Dentist",
+        "clinic": "Happy Kids Dental",
+        "years": "5"
+      },
+      {
+        "position": "Intern",
+        "clinic": "City Dental Hospital",
+        "years": "2"
+      }
+    ],
+    "services": [
+      "Pediatric Dentistry",
+      "Sedation Dentistry",
+      "General Dentistry"
+    ],
+    "awards": [
+      "Top Pediatric Dentist (2020)",
+      "Patient Comfort Excellence Award (2022)"
+    ],
+    "specializations": [
+      "Pediatric Dentistry",
+      "Sedation Dentistry"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Dr. Richard Turner",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD6h_ZGBQiaX61QvICHut_Cz6f0XiRjabGfw&usqp=CAU",
+    "about_me": "Committed to enhancing smiles and improving oral health through personalized care.",
+    "education": "Doctor of Dental Surgery (DDS) - Elite Dental College",
+    "work_experience": [
+      {
+        "position": "Principal Dentist",
+        "clinic": "Radiant Smiles Dental",
+        "years": "10"
+      },
+      {
+        "position": "Cosmetic Dentist",
+        "clinic": "Aesthetic Dental Studio",
+        "years": "7"
+      },
+      {
+        "position": "Resident Dentist",
+        "clinic": "City Dental Hospital",
+        "years": "3"
+      }
+    ],
+    "services": [
+      "Cosmetic Dentistry",
+      "Restorative Dentistry",
+      "Smile Makeovers"
+    ],
+    "awards": [
+      "Cosmetic Dentist of the Year (2019)",
+      "Smile Enhancement Excellence Award (2021)"
+    ],
+    "specializations": [
+      "Cosmetic Dentistry",
+      "Smile Makeovers"
+    ]
+  }
+  
+]
+       
+

@@ -4,7 +4,7 @@ const Patients = () => {
     return (
         <div className='mt-20'>
             <h1 className='text-4xl font-bold text-center mb-4'>What Our Patients Says</h1>
-            <p className='w-[80%] mx-auto text-center text-sm'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p className='w-[60%] mx-auto text-center text-sm'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 
             <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full">

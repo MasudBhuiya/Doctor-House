@@ -2,19 +2,24 @@ import React from 'react';
 import '../Home/Banner.css'
 import { FaStar } from 'react-icons/fa';
 import { SlLocationPin } from 'react-icons/sl';
+import { useLoaderData } from 'react-router-dom';
 const DoctorProfile = () => {
+    const doctorData = useLoaderData();
+    console.log(doctorData);
     return (
         <>
             <div className='img  h-[350px] -mt-28'>
+                <div className='max-w-[1440px] mx-auto'>
                 <h1 className='pt-48 text-white ps-10'>Home/Doctor Profile</h1>
                 <h1 className='text-white text-4xl font-bold ps-10'>Doctor Profile</h1>
+                </div>
             </div>
-            <div className='p-2'>
+            <div className='max-w-[1460px] mx-auto px-5'>
                 <div className="card lg:card-side bg-base-100 shadow-xl mt-20 mb-12 md:px-8 md:py-5">
-                    <figure><img className='rounded-lg' src="https://i.ibb.co/4fGmCss/Screenshot-2023-11-24-234757.png" alt="Album" /></figure>
+                    <figure><img className='rounded-lg md:w-[550px] ' src={doctorData?.image} alt="Album" /></figure>
                     <div className="card-body">
-                        <h2 className="text-3xl font-bold">Dr. Ruby Perrin</h2>
-                        <h2>MBBS, MD - General Medicine</h2>
+                        <h2 className="text-3xl font-bold">{doctorData?.name}</h2>
+                        <h2>{doctorData?.education}</h2>
                         <div className='flex text-2xl items-center text-orange-400 '>
                             <FaStar></FaStar>
                             <FaStar></FaStar>
@@ -39,15 +44,15 @@ const DoctorProfile = () => {
                 </div>
             </div>
 
-            <div className='p-3 shadow-xl mb-10 md:p-8'>
-                <div className='sm:space-x-3 sm:w-[380px] md:w-full  border-2 sm:pe-5 my-6 font-bold text-sm rounded-md flex justify-between items-center '>
+            <div className=' shadow-xl max-w-[1440px] mx-auto px-5'>
+                <div className='sm:space-x-3 sm:w-[380px] md:w-full border-2 sm:pe-5 my-6 font-bold text-sm rounded-md flex justify-between items-center '>
                     <button className='btn btn-primary'>Overview</button>
                     <p>Locations</p>
                     <p>Reviews</p>
                     <p>Business Hours</p>
                 </div>
                 <h2 className='text-2xl font-bold'>About Me</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p className='my-3'>{doctorData?.about_me} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, labore sapiente corporis tempora, voluptas commodi harum ipsum vero veritatis assumenda, repudiandae beatae error. Deleniti veritatis ipsam culpa magni qui ab ex inventore provident eveniet autem, dolore suscipit laboriosam exercitationem eum!</p>
 
                 <div className='grid md:grid-cols-2'>
                     <div className='mb-4'>
@@ -61,50 +66,45 @@ const DoctorProfile = () => {
                         <br />
                         <h1 className='text-2xl font-bold'>Works & Experience</h1>
                         <br />
-                        <li className='font-bold'>Glowing Smiles Family Dental Clinic</li>
-                        <p className='ms-6'> 2010 - Present (5 years)</p>
-                        <li className='font-bold'>Comfort Care Dental Clinic</li>
-                        <p className='ms-6'> 2007 - 2010 (3 years)</p>
-                        <li className='font-bold'>Dream Smile Dental Practice</li>
-                        <p className='ms-6'> 2005 - 2007 (2 years)</p>
+                        {
+                            doctorData?.work_experience.map(work => <div className='mb-3'>
+                            <li className='font-bold'>{work?.clinic}</li>
+                        <p className='ms-6'>{work?.position} ({work?.years} years)</p>
+                            </div>)
+                        }
                         <br />
                         <h1 className='text-2xl font-bold'>Services</h1>
                         <br />
-                        <li>Tooth cleaning</li>
-                        <li>Root Canal Therapy</li>
-                        <li>Implants</li>
-                        <li>Composite Bonding</li>
-                        <li>Fissure Sealants</li>
-                        <li>Surgical Extractions</li>
+                        {
+                            doctorData?.services.map(work => <li>{work}</li>)
+                        }
                     </div>
 
 
                     <div className='mb-4'>
                         <h1 className='font-bold text-2xl'>Awards</h1>
                         <br />
-                        <p className='ms-6'>July 2019</p>
-                        <li className='font-bold'>Humanitarian Award</li>
+                        {
+                            doctorData?.awards.map(awd => <>
+                            <p className='ms-6 font-bold'>{awd}</p>
                         <p className='ms-6'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus.
                             Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                         <br />
-                        <p className='ms-6'> March 2011</p>
-                        <li className='font-bold'>Certificate for International Volunteer Service</li>
-                        <p className='ms-6'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus.
-                            Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                        <br />
-                        <p className='ms-6'>May 2008</p>
-                        <li className='font-bold'>The Dental Professional of The Year Award</li>
-                        <p className='ms-6'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a ipsum tellus.
-                            Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                            </>)
+                        }
                             <br />
                             <h1 className='font-bold text-2xl'>Specializations</h1>
                             <br />
-                            <li>Children Care</li>
+                            {
+                            doctorData?.awards.map(awd => <li>{awd}</li>
+                            )
+                        }
+                            {/* <li>Children Care</li>
                             <li>Dental Care</li>
                             <li>Oral and Maxillofacial Surgery</li>
                             <li>Orthodontist</li>
                             <li>Periodontist</li>
-                            <li>Prosthodontics</li>
+                            <li>Prosthodontics</li> */}
                     </div>
                 </div>
             </div>

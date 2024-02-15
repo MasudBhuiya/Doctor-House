@@ -4,13 +4,15 @@ import { FaGreaterThan, FaLessThan } from 'react-icons/fa';
 
 const Appointment = () => {
     return (
-        <>
-            <div className='img  h-[350px] -mt-28'>
-                <h1 className='pt-48 text-white ps-10'>Home/Appointment</h1>
-                <h1 className='text-white text-4xl font-bold ps-10'>Appointment</h1>
+        <div className=''>
+            <div className='img   h-[350px] -mt-28'>
+                <div className='max-w-[1440px] mx-auto px-5'>
+                <h1 className='pt-48 text-white'>Home/Appointment</h1>
+                <h1 className='text-white text-4xl font-bold'>Appointment</h1>
+                </div>
             </div>
-            <div className='md:flex justify-between items-center my-20 lg:mx-16 p-2'>
-                <div className='card sm:w-80 p-5 h-fit  mx-auto md:ms-0 shadow-lg'>
+            <div className='md:flex justify-between max-w-[1440px] mx-auto items-center mt-20 md:mt-32  px-5'>
+                <div className='card sm:w-80  p-6  mx-auto shadow-lg'>
                     <h1 className='flex justify-between items-center'><span className='font-bold text-lg'>April 2023</span><span className='flex gap-3'><FaLessThan></FaLessThan> <FaGreaterThan></FaGreaterThan></span></h1>
                     <div className='flex justify-between '>
                     <div className='mt-5 '>
@@ -79,12 +81,12 @@ const Appointment = () => {
             </div>
 
 
-            <div>
+            <div className='mt-20 md:mt-32 px-5'>
                 <p className='text-orange-300 text-center'>Available Services on April 30, 2022</p>
-                <h1 className='text-4xl font-bold text-center'>Please select a service</h1>
-
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-fit mx-auto mt-14 mb-20'>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                
+                <h1 className='text-4xl font-bold text-center px-5'>Available slots for Teeth Orthodontics.</h1>
+                <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12 w-full max-w-[1440px] mx-auto mt-14 mb-20'>
+                <div className="card w-full shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
@@ -97,7 +99,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                <div className="card w-full shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
@@ -110,7 +112,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                <div className="card w-full shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
@@ -123,7 +125,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                <div className="card w-full shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
@@ -136,7 +138,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                <div className="card w-full shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
@@ -149,7 +151,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 lg:w-80 xl:w-96 shadow-lg">
+                <div className="card w-full shadow-lg">
                     <div className="card-body flex items-center justify-center">
                         <div className='flex gap-8 items-center justify-between'>
                         <div className='text-5xl mt-2'>
@@ -166,8 +168,9 @@ const Appointment = () => {
             </div>
 
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-fit mx-auto mt-14 mb-20'>
-            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+            <h1 className='text-4xl font-bold text-center'>Please select a service</h1>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1440px] mx-auto px-5 mt-14 mb-20'>
+            <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
@@ -181,7 +184,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+            <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
@@ -195,7 +198,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+            <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
@@ -209,7 +212,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+            <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
@@ -223,7 +226,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+            <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
@@ -237,7 +240,7 @@ const Appointment = () => {
                         </div>
                     </div>
                 </div>
-            <div className="card w-96 lg:w-80 xl:w-96 shadow-lg py-10">
+            <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
@@ -255,7 +258,7 @@ const Appointment = () => {
 
 
 
-        </>
+        </div>
     );
 };
 

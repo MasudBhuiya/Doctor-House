@@ -31,13 +31,18 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "doctor-profile",
-        element:<DoctorProfile></DoctorProfile>
+        path: "doctor-profile/:id",
+        element:<DoctorProfile></DoctorProfile>,
+        loader: ({params}) => fetch(`http://localhost:5000/doctors/${params.id}`)
       },
       {
         path: "appointment",
         element: <Appointment></Appointment>
-      }
+      },
+      // {
+      //   path: 'services',
+      //   element:
+      // }
     ]
   },
   {
