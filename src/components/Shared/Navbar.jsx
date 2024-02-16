@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = () => {
-    const user = "ali";
+    const {user, logOut} = useContext(AuthContext);
+    const handleLogout = () =>{
+      logOut()
+      .then()
+      .catch(err=> {
+        console.log(err.message);
+      })
+    }
     const navItems = <>
     <li className=' font-bold'><Link to='/'>Home</Link></li>
     <li className=' font-bold'><Link to='/about'>About</Link></li>
     <li className=' font-bold'><Link to='/appointment'>Appointment</Link></li>
     {/* <li className=' font-bold'><Link to='/reviews'>Reviews</Link></li> */}
     <li className=' font-bold'><Link to='/dashboard'>Dashboard</Link></li>
-    <li className=' font-bold'><Link to='/login'>Login</Link></li>
-    
+    <li>
+    {user ? <><button className="btn btn-link text-white" onClick={handleLogout} >LogOut</button></> : <button className="btn btn-link text-white"><Link to='/login'>Login</Link></button>}
+    </li>
+       
   </>
     return (
         <div className="navbar max-w-[1440px] mx-auto text-white">
@@ -32,10 +42,6 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        {/* <div className="navbar-end">
-          {user ? <><img title={user.displayName} className="w-10 h-10 rounded-3xl mr-4" src={user.photoURL
-      } alt="" /><button className="btn btn-link text-white" >LogOut</button></> : <button className="btn btn-link text-white"><Link to='/login'>Login</Link></button>}
-        </div> */}
       </div>
     );
 };

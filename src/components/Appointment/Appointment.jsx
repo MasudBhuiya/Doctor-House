@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "../Home/Banner.css"
 import { FaGreaterThan, FaLessThan } from 'react-icons/fa';
 
 const Appointment = () => {
+    const [services, setServices] = useState([]);
+    // const {user} = useContext(AuthContext)
+// console.log(services);
+
+    useEffect(()=>{
+        fetch('docappoint.json')
+        .then(res=> res.json())
+        .then(data => setServices(data))
+    },[])
+
+    const handleAppointments = (service) =>{
+        console.log(service);
+    }
     return (
         <div className=''>
             <div className='img   h-[350px] -mt-28'>
@@ -170,90 +183,25 @@ const Appointment = () => {
 
             <h1 className='text-4xl font-bold text-center'>Please select a service</h1>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1440px] mx-auto px-5 mt-14 mb-20'>
-            <div className="card w-full shadow-lg py-10">
+            {
+                services?.map(service => <div key={service?.id}>
+                <div className="card w-full shadow-lg py-10">
                     <div className="card-body flex items-center justify-center">
                         <div className='text-center'>
                         <div className='flex items-center justify-center'>
-                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
+                        <img className='rounded-full h-32 mb-6' src={service?.image} alt="" />
                         </div>
                         <div>
-                            <h2 className="text-2xl font-bold mb-3">Teeth Prthodontics</h2>
-                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
+                            <h2 className="text-2xl font-bold mb-3">{service?.treatment}</h2>
+                            <h2 className="text-md font-bold mb-8">{service?.time}</h2>
                         </div>
-                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
+                        <button onClick={()=>handleAppointments(service)} className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
                         </div>
                     </div>
                 </div>
-            <div className="card w-full shadow-lg py-10">
-                    <div className="card-body flex items-center justify-center">
-                        <div className='text-center'>
-                        <div className='flex items-center justify-center'>
-                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-bold mb-3">Cosmetic Dentisty</h2>
-                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
-                        </div>
-                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
-                        </div>
-                    </div>
-                </div>
-            <div className="card w-full shadow-lg py-10">
-                    <div className="card-body flex items-center justify-center">
-                        <div className='text-center'>
-                        <div className='flex items-center justify-center'>
-                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/c8FrGzz/Screenshot-2023-11-27-010002.png" alt="" />
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-bold mb-3">Teeth Cleaning</h2>
-                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
-                        </div>
-                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
-                        </div>
-                    </div>
-                </div>
-            <div className="card w-full shadow-lg py-10">
-                    <div className="card-body flex items-center justify-center">
-                        <div className='text-center'>
-                        <div className='flex items-center justify-center'>
-                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/j3w6XwJ/Screenshot-2023-11-27-010021.png" alt="" />
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-bold mb-3">Cavity Protection</h2>
-                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
-                        </div>
-                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
-                        </div>
-                    </div>
-                </div>
-            <div className="card w-full shadow-lg py-10">
-                    <div className="card-body flex items-center justify-center">
-                        <div className='text-center'>
-                        <div className='flex items-center justify-center'>
-                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/h9zD8JZ/Screenshot-2023-11-27-010037.png" alt="" />
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-bold mb-3">Pediatric Dental</h2>
-                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
-                        </div>
-                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
-                        </div>
-                    </div>
-                </div>
-            <div className="card w-full shadow-lg py-10">
-                    <div className="card-body flex items-center justify-center">
-                        <div className='text-center'>
-                        <div className='flex items-center justify-center'>
-                        <img className='rounded-full h-32 mb-6' src="https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png" alt="" />
-                        </div>
-                        <div>
-                            <h2 className="text-2xl font-bold mb-3">Oral Surgery</h2>
-                            <h2 className="text-md font-bold mb-8">8:00 AM - 9:00 AM</h2>
-                        </div>
-                        <button className="btn px-10 text-white bg-orange-300 hover:bg-orange-400">Book Appointment</button>
-                        </div>
-                    </div>
-                </div>
+                </div>)
+            }
+            
             </div>
 
 

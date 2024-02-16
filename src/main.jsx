@@ -21,6 +21,7 @@ import AddDoctor from './components/Dashboard/Admin/AddDoctor';
 import ManageUsers from './components/Dashboard/Admin/ManageUser/ManageUsers';
 import Recharts from './components/Dashboard/Recharts';
 import PatientsChart from './components/Dashboard/PatientsChart';
+import AuthProvider from './Provider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -95,6 +96,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+     <AuthProvider>
      <RouterProvider router={router} />
+     </AuthProvider>
   </React.StrictMode>,
 )

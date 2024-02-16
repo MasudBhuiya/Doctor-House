@@ -21,7 +21,7 @@ const Dashboard = () => {
   //   roles.map(role => setRole(role))
   // },[roles])
 
-  const role = "doctor";
+  const role = "";
 
   return (
     <div className='bg-slate-200'>

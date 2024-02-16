@@ -17,7 +17,7 @@ const PatientsChart = () => {
         },
         {
           "subject": "assignment-three",
-          "mark": 60,
+          "mark": 55,
           "fullMark": 60
         },
         {
@@ -32,7 +32,7 @@ const PatientsChart = () => {
         },
         {
           "subject": "assignment-six",
-          "mark": 58,
+          "mark": 52,
           "fullMark": 60
         },
         {
@@ -88,8 +88,8 @@ const PatientsChart = () => {
         },
       ];
     return (
-        <div className='md:flex  mt-12 '>
-            <div className=''>
+        <div className='md:flex gap-8 justify-evenly mt-12 '>
+            <div className='bg-white p-5 rounded-xl'>
             <h1 className='text-4xl font-semibold mb-6 text-center'>Appoints</h1>
             <RadarChart outerRadius={100} width={730} height={350} data={data}>
   <PolarGrid />
@@ -103,8 +103,8 @@ const PatientsChart = () => {
             </div>
 
 
-<div className=' '>
-<h1 className='text-4xl font-semibold mb-6'>Patients</h1>
+<div className=' bg-white p-5 rounded-xl'>
+<h1 className='text-4xl font-semibold mb-6 text-center'>Patients</h1>
 <BarChart width={600} height={400} data={data2}>
             <Bar dataKey="uv" fill="#8884d8" />
             <XAxis dataKey='name'></XAxis>
