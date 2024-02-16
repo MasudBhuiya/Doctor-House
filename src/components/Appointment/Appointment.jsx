@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import "../Home/Banner.css"
 import { FaGreaterThan, FaLessThan } from 'react-icons/fa';
+import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const Appointment = () => {
     const [services, setServices] = useState([]);
-    // const {user} = useContext(AuthContext)
+    const {user} = useContext(AuthContext)
 // console.log(services);
 
     useEffect(()=>{
@@ -14,7 +17,35 @@ const Appointment = () => {
     },[])
 
     const handleAppointments = (service) =>{
-        console.log(service);
+        
+        if(user === false){
+            return Swal.fire({
+                icon: "error",
+                title: "Please Login First",
+              });
+        }
+        else{
+            fetch('http://localhost:5000/appoints',{
+            method: "POST",
+            headers: {
+        'content-type' : 'application/json'
+      },
+      body: JSON.stringify({name : service?.name,  image: service?.image, time: service?.time2, email: user?.email,treatment: service?.treatment })
+      })
+        .then(res => res.json())
+        .then(data => {
+            if(data.acknowledged == true){
+                console.log(data);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your work has been saved',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+        }
     }
     return (
         <div className=''>
