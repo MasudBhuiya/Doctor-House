@@ -1,4 +1,3 @@
-// import React from 'react';
 import {FaGoogle} from "react-icons/fa"
 import { useContext } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -16,9 +15,9 @@ const SocialLogin = () => {
         googleSignIn()
         .then(result => {
             const loggedUser = result.user;
-            // console.log(loggedUser);
-            const saveUser = {name: loggedUser.name, email: loggedUser.email, image: loggedUser.photoURL};
-            fetch('https://assignment-twelve-server-gilt.vercel.app/users', {
+            console.log(loggedUser);
+            const saveUser = {name: loggedUser.displayName, email: loggedUser.email, role: 'user', image: loggedUser.photoURL};
+            fetch('http://localhost:5000/users', {
           method: 'POST',
           headers: {
             'content-type' : 'application/json'
@@ -27,13 +26,6 @@ const SocialLogin = () => {
         })
         .then(res => res.json())
         .then( () => {
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "User Created Successfully",
-                showConfirmButton: false,
-                timer: 1500
-              });
                 navigate(from, {replace: true})
         } )
         })

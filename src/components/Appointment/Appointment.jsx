@@ -8,17 +8,21 @@ import { Link } from 'react-router-dom';
 const Appointment = () => {
     const [services, setServices] = useState([]);
     const {user} = useContext(AuthContext)
-// console.log(services);
-
+console.log(user);
+const today = new Date();
+    // console.log(today);
+    
     useEffect(()=>{
         fetch('docappoint.json')
         .then(res=> res.json())
         .then(data => setServices(data))
     },[])
 
+    const date = (today.getDate() + '/' + (today.getMonth() + 1) + '/' +  today.getFullYear());
+    // console.log(date);
     const handleAppointments = (service) =>{
         
-        if(user === false){
+        if(user === null){
             return Swal.fire({
                 icon: "error",
                 title: "Please Login First",
@@ -30,7 +34,7 @@ const Appointment = () => {
             headers: {
         'content-type' : 'application/json'
       },
-      body: JSON.stringify({name : service?.name,  image: service?.image, time: service?.time2, email: user?.email,treatment: service?.treatment })
+      body: JSON.stringify({name : service?.name,  image: service?.image, time: service?.time2,date:date, email: user?.email,treatment: service?.treatment })
       })
         .then(res => res.json())
         .then(data => {

@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import SocialLogin from '../Shared/SocialLogin';
 
 const Register = () => {
-    const {signUp} = useContext(AuthContext);
+    const {signUp, updateUserProfile} = useContext(AuthContext);
     const [error, setError] = useState(null);
     
     const navigate = useNavigate();
@@ -17,24 +17,49 @@ const Register = () => {
        const form = e.target;
        const email = form.email.value;
        const password = form.password.value;
+       const name = form.name.value;
+       const photoURL = form.photo.value;
        console.log(email, password);
       const from = location.state?.from?.pathname || '/';
     setError('');
-      signUp(email, password)
-      .then(() => {
+    signUp(email, password)
+    .then(result=>{
+      const loggedUser = result.user;
+      // console.log(loggedUser);
+      navigate(from)
+      updateUserProfile(name, photoURL)
+      .then(()=>{
+        const saveUser = {name: loggedUser.displayName, role: 'user', email: loggedUser.email, image: loggedUser.photoURL};
+        fetch('http://localhost:5000/users', {
+          method: 'POST',
+          headers: {
+            'content-type' : 'application/json'
+          },
+          body: JSON.stringify(saveUser)
+        })
+        .then(res => res.json())
+        .then( data => {
+          if(data.insertedId){
+            form.reset()
         Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "User Created Successfully",
+          position: 'top-end',
+          icon: 'success',
+          title: 'User created successfully',
           showConfirmButton: false,
           timer: 1500
-        });
-        navigate(from, {replace: true})
+        })
+          }
+        } )
+        
       })
       .catch(error => {
         setError(error.message)
       })
-      };
+    })
+    .catch(error => {
+      setError(error.message)
+    })
+  }
     return (
         <div className='max-w-screen-xl mx-auto'>
             <div className='md:flex items-center justify-center gap-10'>
@@ -51,8 +76,8 @@ const Register = () => {
                 <input className="input input-bordered border-0 w-full bg-zinc-100" placeholder="Enter your Name" type="text" name="name" />
                 </div>
                 <div>
-                <p className=' mb-1 mt-3 text-lg font-bold'>Username</p>
-                <input className="input input-bordered border-0 w-full bg-zinc-100" placeholder="Enter your username" type="text" name="username" />
+                <p className=' mb-1 mt-3 text-lg font-bold'>Photo URL</p>
+                <input className="input input-bordered border-0 w-full bg-zinc-100" placeholder="Photo URL" type="url" name="photo" />
                 </div>
                 <div>
                 <p className=' mb-1 mt-3 text-lg font-bold'>Email</p>

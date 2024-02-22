@@ -3,7 +3,7 @@ import { FiPhoneOutgoing } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl"
 const ContactUs = () => {
     return (
-        <div className='p-6 md:p-20 bg-teal-950 rounded-md my-20 text-white'>
+        <div id='contact' className='p-6 md:p-20 bg-teal-950 rounded-md my-20 text-white'>
             <div className='md:flex items-center justify-around gap-6'>
                 <div className='flex flex-col md:w-[40%]  justify-center'>
                     <h1 className='font-bold text-3xl mb-3'>Contact With Us</h1>

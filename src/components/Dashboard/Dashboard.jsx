@@ -1,27 +1,25 @@
 
-import { FaBook, FaHome, FaShoppingCart, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
+import { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Dashboard = () => {
-  // const [classe] = useClass();
-  // const [roles, setRoles] = useState([])
-  // const [role, setRole] = useState({})
-  // // console.log(role);
-  // const {user} = useContext(AuthContext);
-  // useTitle('Dashboard')
-  // useEffect(()=>{
-  //   fetch(`https://assignment-twelve-server-gilt.vercel.app/roleusers?email=${user.email}`)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     setRoles(data)
-  //   })
-  // },[])
+  const [roles, setRoles] = useState([])
+  const [role, setRole] = useState({})
+  // console.log(role);
+  const {user} = useContext(AuthContext);
+  useEffect(()=>{
+    fetch(`http://localhost:5000/roleusers?email=${user?.email}`)
+    .then(res => res.json())
+    .then(data => {
+      setRoles(data)
+    })
+  },[])
 
-  // useEffect(()=>{
-  //   roles.map(role => setRole(role))
-  // },[roles])
+  useEffect(()=>{
+    roles.map(role => setRole(role))
+  },[roles])
 
-  const role = "";
 
   return (
     <div className='bg-slate-200'>
@@ -39,7 +37,7 @@ const Dashboard = () => {
 
 
             {
-              role === 'admin' && <>
+              role.role === 'admin' && <>
                 {/* Sidebar content here */}
                 <li><NavLink to="/dashboard/allusers">All Users</NavLink></li>
                 <li><NavLink to="/dashboard/adddoctor">Add a Doctor</NavLink></li>
@@ -48,13 +46,13 @@ const Dashboard = () => {
               </>
             }
             {
-              role === 'doctor' && <>
+              role.role === 'doctor' && <>
                 {/* Sidebar content here */}
                 <li><NavLink to="/dashboard/doctorappointments"> My Appointments</NavLink></li>
               </>
             }
             {
-              !role && <>
+              role.role === 'user' && <>
                 {/* Sidebar content here */}
                 <li><NavLink to="/dashboard/myappointments">My Appointments</NavLink></li>
                 <li><NavLink to="/dashboard/myclasses"> My Reviews</NavLink></li>

@@ -1,6 +1,6 @@
 [
     {
-        "name": "John Doe",
+        "name": "Dr. John Smith",
         "id" : 1,
         "treatment": "Teeth Prthodontics",
         "time": "08.30 AM - 10.00 AM",
@@ -8,7 +8,7 @@
         "image": "https://i.ibb.co/tz5VyBj/Screenshot-2023-11-27-010059.png"
     },
     {
-        "name": "John Doe",
+        "name": "Dr. Emily Johnson",
         "id" : 2,
         "treatment": "Cosmetic Dentisty",
         "time": "10.00 AM - 11.30 AM",
@@ -16,7 +16,7 @@
         "image": "https://i.ibb.co/c8FrGzz/Screenshot-2023-11-27-010002.png"
     },
     {
-        "name": "John Doe",
+        "name": "Dr. Sarah Brown",
         "id" : 3,
         "treatment": "Teeth Cleaning",
         "time": "11.30 AM - 01.00 PM",
@@ -24,7 +24,7 @@
         "image": "https://i.ibb.co/c8FrGzz/Screenshot-2023-11-27-010002.png"
     },
     {
-        "name": "John Doe",
+        "name": "Dr. Michael Davis",
         "id" : 4,
         "treatment": "Cavity Protection",
         "time": "01.00 PM - 02.30 PM",
@@ -32,7 +32,7 @@
         "image": "https://i.ibb.co/j3w6XwJ/Screenshot-2023-11-27-010021.png"
     },
     {
-        "name": "John Doe",
+        "name": "Dr. Jessica White",
         "id" : 5,
         "treatment": "Pediatric Dental",
         "time": "02.30 PM - 04.00 PM",
@@ -40,7 +40,7 @@
         "image": "https://i.ibb.co/h9zD8JZ/Screenshot-2023-11-27-010037.png"
     },
     {
-        "name": "John Doe",
+        "name": "Dr. Richard Turner",
         "id" : 6,
         "treatment": "Oral Surgery",
         "time": "04.00 PM - 05.00 PM",

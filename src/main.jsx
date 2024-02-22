@@ -22,6 +22,7 @@ import ManageUsers from './components/Dashboard/Admin/ManageUser/ManageUsers';
 import Recharts from './components/Dashboard/Recharts';
 import PatientsChart from './components/Dashboard/PatientsChart';
 import AuthProvider from './Provider/AuthProvider';
+import PrivateRoute from './components/Route/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element:<Dashboard></Dashboard>,
+    element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children: [
       {
         path: '',
@@ -72,7 +73,8 @@ const router = createBrowserRouter([
       },
       {
         path: "myappointments",
-        element: <MyAppointments></MyAppointments>
+        element: <MyAppointments></MyAppointments>,
+        loader: ()=> fetch('http://localhost:5000/appoints')
       },
       {
         path: "doctorappointments",
@@ -80,7 +82,8 @@ const router = createBrowserRouter([
       },
       {
         path: "allusers",
-        element: <Users></Users>
+        element: <Users></Users>,
+        loader: ()=> fetch('http://localhost:5000/users')
       },
       {
         path: "adddoctor",
@@ -88,7 +91,8 @@ const router = createBrowserRouter([
       },
       {
         path: "managedoctor",
-        element: <ManageUsers></ManageUsers>
+        element: <ManageUsers></ManageUsers>,
+        loader: ()=> fetch('http://localhost:5000/doctors')
       }
     ]
   }

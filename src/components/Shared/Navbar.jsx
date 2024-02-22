@@ -13,14 +13,18 @@ const Navbar = () => {
     }
     const navItems = <>
     <li className=' font-bold'><Link to='/'>Home</Link></li>
-    <li className=' font-bold'><Link to='/about'>About</Link></li>
     <li className=' font-bold'><Link to='/appointment'>Appointment</Link></li>
-    {/* <li className=' font-bold'><Link to='/reviews'>Reviews</Link></li> */}
+    <li className=' font-bold'><Link to='/about'>About</Link></li>
+    <li className=' font-bold'><a href='/#contact'>Contact</a></li>
     <li className=' font-bold'><Link to='/dashboard'>Dashboard</Link></li>
+    
     <li>
-    {user ? <><button className="btn btn-link text-white" onClick={handleLogout} >LogOut</button></> : <button className="btn btn-link text-white"><Link to='/login'>Login</Link></button>}
+    {user ? <><p onClick={handleLogout} className="btn btn-link
+  "><Link>LOG OUT</Link></p></>: <p className="btn btn-link mr-2
+  "><Link to="/login">LOGIN</Link></p>}
     </li>
-       
+    {user ? <img className="w-8 h-8 rounded-full" src={user?.photoURL
+} alt="" />: <img className="w-8 h-8 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpsSYuMnSziZqiTm7N3_cuyCNbBwkLCxtgN7V6rlV4VaMUje7vpgmUDRJxQiZM7TWI7xM&usqp=CAU" alt="" />}
   </>
     return (
         <div className="navbar max-w-[1440px] mx-auto text-white">
@@ -37,7 +41,7 @@ const Navbar = () => {
               <img className="h-full w-16 rounded" src='https://images-workbench.99static.com/l20BQsocuxaOUoYnFlWb-1XSOvY=/99designs-contests-attachments/80/80402/attachment_80402256' alt="" />
           </Link>
         </div>
-        <div className="navbar-end hidden lg:flex">
+        <div className="navbar-end hidden  lg:items-center lg:flex">
           <ul className="menu menu-horizontal px-1">
             {navItems}
           </ul>

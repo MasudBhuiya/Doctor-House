@@ -1,21 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../Provider/AuthProvider';
 // import appoints from "../../../../public/appoint.json"
 const MyAppointments = () => {
     const [appoint, setAppoints] = useState([]);
+    const [mylists, setMyLists] = useState([]);
+    const myAddedlists = useLoaderData();
+    const {user} = useContext(AuthContext);
 
+    
+
+    console.log(mylists);
     useEffect(()=>{
         fetch('../../../../public/appoint.json')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             setAppoints(data);
         })
-
     },[])
+
+    useEffect(()=>{
+      const mydata = myAddedlists?.filter(mylist => mylist?.email == user?.email);
+      setMyLists(mydata)
+  },[myAddedlists, user])
+
+
     return (
         <div className=" lg:p-10">
-            <h1 className='text-3xl font-bold mb-6 mt-6 lg:mt-0'>My Appointments : {appoint.length}</h1>
+            <h1 className='text-3xl font-bold mb-6 mt-6 lg:mt-0'>My Appointments : {mylists.length}</h1>
       <div className="w-full justify-center">
         <div>
           
@@ -25,7 +38,7 @@ const MyAppointments = () => {
             <table className="table  table-sm">
 
               <tbody className="item-center">
-                {appoint.map((user, index) => (
+                {mylists.map((user, index) => (
                   <tr
                     key={index}
                     className={
@@ -65,7 +78,7 @@ const MyAppointments = () => {
                 </tr>
               </thead>
               <tbody className="item-center">
-                {appoint.map((user, index) => (
+                {mylists.map((user, index) => (
                   <tr
                     key={index}
                     className={

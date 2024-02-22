@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Users = () => {
 
-    const [users, setusers] = useState([]);
 
-    useEffect(()=>{
-        fetch('../../../../public/users.json')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            setusers(data);
-        })
-
-    },[])
-
+    const users = useLoaderData();
 
     return (
         <div className=" lg:p-10">
-            <h1 className='text-3xl font-bold mb-6 mt-6 lg:mt-0'>My Appointments : {users.length}</h1>
+            <h1 className='text-3xl font-bold mb-6 mt-6 lg:mt-0'>All Users : {users.length}</h1>
       <div className="w-full justify-center">
         <div>
           
@@ -42,7 +33,7 @@ const Users = () => {
                     <hr className="font-bold" />
                     <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>JOB: </span><p>
                     {
-                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white w-fit px-5 py-1 rounded">{user.job}</p>
+                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white w-fit px-5 py-1 rounded">Make Admin</p>
                     }
                     </p>
                     </td>
@@ -82,7 +73,7 @@ const Users = () => {
                     <td className="md:font-semibold">{user.email}</td>
                     <td>
                     {
-                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white btn">{user.job}</p>
+                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white btn">Make Admin</p>
                     }
                     </td>
                       

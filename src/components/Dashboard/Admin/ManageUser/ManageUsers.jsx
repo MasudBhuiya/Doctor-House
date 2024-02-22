@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const ManageUsers = () => {
-    const [users, setusers] = useState([]);
-
-    useEffect(()=>{
-        fetch('../../../../../public/manageUser.json')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            setusers(data);
-        })
-
-    },[])
-
+    
+const users = useLoaderData();
+console.log(users);
 
     return (
         <div className=" lg:p-10">
@@ -35,16 +27,13 @@ const ManageUsers = () => {
                   >
                     <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>NO: </span>{index+1}.</td>
                     <hr className="font-bold" />
-                    <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>EMAIL: </span>{user.email}</td>
+                    <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>EMAIL: </span><img src={user.image} alt="" /></td>
                     <hr className="font-bold" />
                     <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>NAME: </span>{user.name}</td>
                     <hr className="font-bold" />
-                    <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>JOB: </span><p>
-                    {
-                        user.job == "" ? <p className=""></p> : <p className="bg-emerald-950 text-white w-fit px-5 py-1 rounded">{user.job}</p>
-                    }
-                    </p>
-                    </td>
+                    <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>NAME: </span>{user.specializations[0]}</td>
+                    <hr className="font-bold" />
+                    
                     <hr className="font-bold" />
                     <td className="sm:text-xl flex"><span className=' font-bold w-[30%] bg-slate-300 flex items-center justify-center -my-2 me-3'>ACTION</span><h1 className=' bg-red-600 text-white w-fit px-5 py-1 rounded '>Delete</h1></td>
                     <hr className="font-bold border-2 border-white" />
@@ -77,9 +66,9 @@ const ManageUsers = () => {
                   >
                       <td className="font-bold md:text-sm">{index+1}.</td>
                     
-                    <td className="md:font-semibold"><img className='rounded-full' src={user.image} alt="" /></td>
+                    <td className="md:font-semibold"><img className='rounded h-12 w-14' src={user.image} alt="" /></td>
                     <td className="md:font-semibold">{user.name}</td>
-                    <td className="md:font-semibold">{user.speciality}</td>
+                    <td className="md:font-semibold">{user.specializations[0]}</td>
                       
                     <td><h1 className=' bg-red-600 text-white btn'>Delete</h1></td>
                   </tr>
