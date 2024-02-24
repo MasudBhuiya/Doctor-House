@@ -30,7 +30,7 @@ const Register = () => {
       updateUserProfile(name, photoURL)
       .then(()=>{
         const saveUser = {name: loggedUser.displayName, role: 'user', email: loggedUser.email, image: loggedUser.photoURL};
-        fetch('http://localhost:5000/users', {
+        fetch('https://doctor-house-server-two.vercel.app/users', {
           method: 'POST',
           headers: {
             'content-type' : 'application/json'

@@ -1,0 +1,12 @@
+.contact-img{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFr0-P1l1hkJJQjYkiB5PGO5rk0wBrYm827A&usqp=CAU');
+    width: 100%;
+    opacity: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+.about-img{
+    background-color: rgb(137, 248, 248);
+    
+}

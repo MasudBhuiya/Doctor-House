@@ -9,7 +9,7 @@ const Doctors = ({doctor}) => {
 
     const handledb = () =>{
         const hello = 'hello';
-        fetch('http://localhost:5000/doctors',{
+        fetch('https://doctor-house-server-two.vercel.app/doctors',{
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -38,7 +38,7 @@ const Doctors = ({doctor}) => {
                         <p className='flex items-center '><span className='text-xl me-3'><IoCalendarClearOutline /></span> Available On Mon, 22 December</p>
                         <p className='flex items-center '><span className='text-xl me-3'><RiMoneyDollarCircleLine /></span> $15</p>
                         <div className="card-actions justify-end">
-                            <Link to={`/doctor-profile/${doctor?._id}`} onClick={handledb} className="btn btn-outline btn-block text-orange-300 hover:bg-orange-100 hover:border-orange-300">View Profile</Link>
+                            <Link to={`/doctor-profile/${doctor?._id}`} onClick={handledb} className="btn btn-outline btn-block text-orange-300 hover:bg-orange-500 hover:border-orange-300">View Profile</Link>
                         </div>
                     </div>
                 </div>

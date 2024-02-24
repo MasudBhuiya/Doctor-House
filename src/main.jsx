@@ -23,6 +23,8 @@ import Recharts from './components/Dashboard/Recharts';
 import PatientsChart from './components/Dashboard/PatientsChart';
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './components/Route/PrivateRoute';
+import ContactUs from './components/Home/ContactUs';
+import About from './components/Home/About';
 
 const router = createBrowserRouter([
   {
@@ -37,16 +39,21 @@ const router = createBrowserRouter([
       {
         path: "doctor-profile/:id",
         element:<DoctorProfile></DoctorProfile>,
-        loader: ({params}) => fetch(`http://localhost:5000/doctors/${params.id}`)
+        // loader: ({params}) => fetch(`https://doctor-house-server-gdhcpmj5o-masudbhuiya.vercel.app/doctors/${params.id}`)
+        loader: ({params}) => fetch(`https://doctor-house-server-two.vercel.app/doctors/${params.id}`)
       },
       {
         path: "appointment",
         element: <Appointment></Appointment>
       },
-      // {
-      //   path: 'services',
-      //   element:
-      // }
+      {
+        path: 'about',
+        element: <About></About>
+      },
+      {
+        path: 'contact',
+        element: <ContactUs></ContactUs>
+      }
     ]
   },
   {
@@ -74,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "myappointments",
         element: <MyAppointments></MyAppointments>,
-        loader: ()=> fetch('http://localhost:5000/appoints')
+        loader: ()=> fetch('https://doctor-house-server-two.vercel.app/appoints')
       },
       {
         path: "doctorappointments",
@@ -83,7 +90,7 @@ const router = createBrowserRouter([
       {
         path: "allusers",
         element: <Users></Users>,
-        loader: ()=> fetch('http://localhost:5000/users')
+        loader: ()=> fetch('https://doctor-house-server-two.vercel.app/users')
       },
       {
         path: "adddoctor",
@@ -92,7 +99,7 @@ const router = createBrowserRouter([
       {
         path: "managedoctor",
         element: <ManageUsers></ManageUsers>,
-        loader: ()=> fetch('http://localhost:5000/doctors')
+        loader: ()=> fetch('https://doctor-house-server-two.vercel.app/doctors')
       }
     ]
   }

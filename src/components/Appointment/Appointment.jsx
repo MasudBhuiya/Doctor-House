@@ -29,7 +29,7 @@ const today = new Date();
               });
         }
         else{
-            fetch('http://localhost:5000/appoints',{
+            fetch('https://doctor-house-server-two.vercel.app/appoints',{
             method: "POST",
             headers: {
         'content-type' : 'application/json'

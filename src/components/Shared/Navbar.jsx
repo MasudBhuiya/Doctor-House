@@ -15,7 +15,7 @@ const Navbar = () => {
     <li className=' font-bold'><Link to='/'>Home</Link></li>
     <li className=' font-bold'><Link to='/appointment'>Appointment</Link></li>
     <li className=' font-bold'><Link to='/about'>About</Link></li>
-    <li className=' font-bold'><a href='/#contact'>Contact</a></li>
+    <li className=' font-bold'><a href='/contact'>Contact</a></li>
     <li className=' font-bold'><Link to='/dashboard'>Dashboard</Link></li>
     
     <li>

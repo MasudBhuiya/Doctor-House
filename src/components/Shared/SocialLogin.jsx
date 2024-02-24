@@ -17,7 +17,7 @@ const SocialLogin = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             const saveUser = {name: loggedUser.displayName, email: loggedUser.email, role: 'user', image: loggedUser.photoURL};
-            fetch('http://localhost:5000/users', {
+            fetch('https://doctor-house-server-two.vercel.app/', {
           method: 'POST',
           headers: {
             'content-type' : 'application/json'

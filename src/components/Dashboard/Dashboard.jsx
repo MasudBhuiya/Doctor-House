@@ -9,7 +9,7 @@ const Dashboard = () => {
   // console.log(role);
   const {user} = useContext(AuthContext);
   useEffect(()=>{
-    fetch(`http://localhost:5000/roleusers?email=${user?.email}`)
+    fetch(`https://doctor-house-server-two.vercel.app/roleusers?email=${user?.email}`)
     .then(res => res.json())
     .then(data => {
       setRoles(data)

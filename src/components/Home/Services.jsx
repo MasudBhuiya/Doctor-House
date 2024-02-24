@@ -7,20 +7,20 @@ const Services = () => {
         <div>
             <div className='grid md:grid-cols-2 gap-6 px-5 mt-20'>
                 <div className='flex items-center justify-center md:justify-start'>
-                    <img className='max-h-[880px] lg:w-[80%]' src="https://i.ibb.co/48pxrf6/Rectangle-20078.png" alt="" />
+                    <img className='max-h-[910px] lg:w-[80%]' src="https://i.ibb.co/48pxrf6/Rectangle-20078.png" alt="" />
                 </div>
                 <div className='max-h-fit'>
                     <h1 className='text-3xl font-bold'>Our Services</h1>
-                    <p className=' mt-3 text-sm'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <div className=' border-2 sm:pe-5 my-6 font-bold text-sm rounded-md flex justify-between items-center '>
+                    <p className=' mt-3 '>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div className=' border-2 sm:pe-5 my-6 font-bold  rounded-md flex justify-between items-center '>
                         <button className='btn btn-primary'>Cavity Protection</button>
                         <p>Cosmetic Dentisty</p>
                         <p>Oral Surgery</p>
                     </div>
                     <img className=' rounded-lg w-full' src="https://i.ibb.co/vP0gNXL/teeth.png" alt="" />
                     <h1 className='text-2xl font-bold mt-7 mb-3'>Electro  Gastrology Therapy</h1>
-                    <p className='text-sm'>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error </p>
-                    <p className='mt-2 text-sm'>Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p className=''>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error </p>
+                    <p className='mt-2 '>Sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                     <button className="btn btn-primary mt-4">All Services</button>
                 </div>
             </div>
