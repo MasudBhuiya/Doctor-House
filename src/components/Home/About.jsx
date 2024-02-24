@@ -61,7 +61,7 @@ const About = () => {
 
 
             <div>
-                <img className='w-full h-[700px]' src="https://media.istockphoto.com/id/1357850307/photo/shot-of-a-group-of-doctors-standing-against-a-city-background.jpg?s=612x612&w=0&k=20&c=cS_IVg2nZp1lR2tJnqiXX6B-UXR0XhxWEQUmijPN_Uo=" alt="" />
+                <img className='w-full h-[800px]' src="https://media.istockphoto.com/id/1357850307/photo/shot-of-a-group-of-doctors-standing-against-a-city-background.jpg?s=612x612&w=0&k=20&c=cS_IVg2nZp1lR2tJnqiXX6B-UXR0XhxWEQUmijPN_Uo=" alt="" />
             </div>
 
 

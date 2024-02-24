@@ -5,6 +5,7 @@ import Services from './Services';
 import Patients from './Patients';
 import Doctors from './Doctors';
 import Choose from './Choose';
+import Contact from './Contact';
 
 const Home = () => {
     const [doctors, setDoctors] = useState([]);
@@ -35,7 +36,7 @@ const Home = () => {
             </div>
             {/* <Doctors></Doctors> */}
             <Choose></Choose>
-            <ContactUs></ContactUs>
+            <Contact></Contact>
         </div>
         </div>
     );
